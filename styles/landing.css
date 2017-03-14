@@ -57,3 +57,27 @@ body.landing{
      color: rgb(233,50,117);
      font-size: 5rem;
  }
+
+.point span:after {
+  pointer-events: none;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  content: '';
+  box-sizing: content-box;
+  box-shadow: 0 0 0 3px #fff;
+  top: 45px;
+  left: 120px;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.point span:hover {
+  color: rgba(233,50,117, .5);
+}
+
+.point span:hover:after {
+  opacity: 1;
+  transform: scale(1.15);
+}
