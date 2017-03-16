@@ -27,6 +27,21 @@ var albumMarconi = {
     ]
 };
 
+var dogAlbum = {
+    title: 'Floofin All Over',
+    artist: 'Nico',
+    label: 'Woof',
+    year: '2017',
+    albumArtUrl: 'assets/images/album_covers/13.png',
+    songs: [
+        { title: 'Beaches are the best!', duration: '1:11' },
+        { title: 'bark, bark, bark', duration: '2:01' },
+        { title: 'All the treats', duration: '4:21'},
+        { title: 'Is my mom coming back?', duration: '2:14' },
+        { title: 'This is mine', duration: '3:15'}
+    ]
+}
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =         
         '<tr class="album-view-song-item">'
@@ -59,4 +74,16 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+   var albumImage = document.getElementsByClassName('album-cover-art')[0];
+    var albums = [albumPicasso, albumMarconi, dogAlbum];
+    var i = 1;
+
+    albumImage.addEventListener('click', function(){
+        setCurrentAlbum(albums[i]);
+        i++;
+        if (i == albums.length) {
+            i = 0;
+        }
+
+    })
 };
