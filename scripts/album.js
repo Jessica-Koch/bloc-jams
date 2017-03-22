@@ -255,7 +255,7 @@ var $nextButton = $('.main-controls .next');
 
 $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
-    $setupSeekBars();
+    setupSeekBars();
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
 
