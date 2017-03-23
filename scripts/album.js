@@ -43,10 +43,7 @@ var createSongRow = function(songNumber, songName, songLength) {
         var songNumber = parseInt($(this).attr('data-song-number'));
 
         if (currentlyPlayingSongNumber !== null) {
-<<<<<<< HEAD
-=======
 
->>>>>>> assignment-play-from-bar
             var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
 
             currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
@@ -54,10 +51,7 @@ var createSongRow = function(songNumber, songName, songLength) {
         }
 
         if (currentlyPlayingSongNumber !== songNumber) {
-<<<<<<< HEAD
 
-=======
->>>>>>> assignment-play-from-bar
             setSong(songNumber);
             currentSoundFile.play();
             updateSeekBarWhileSongPlays();
